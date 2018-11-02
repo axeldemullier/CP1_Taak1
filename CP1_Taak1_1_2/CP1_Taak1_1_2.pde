@@ -1,15 +1,26 @@
 void setup(){
   size(600,800);
-  background(255);
-  stroke(253, 231, 171);
-  strokeWeight(2);
+  background(#030303); 
+  strokeWeight(1);
+  colorMode(HSB,360,100,100);
  drawBookCover();
+ drawEllipse();
 }
 
  void drawBookCover(){
   for (float y = 0; y < height; y+=15)
   for (float x =0; x < width; x+=15){
-    rect(x,y,15,15);
-    fill(random(255),random(255),random(255));
-  }   
+    ellipse(x,y,30,30); 
+    fill(random(0,360),100,100);
+
+    
+}
  }
+ 
+  
+ void drawEllipse(){
+   ellipseMode(CENTER);  
+ fill(random(0,360),100,100);
+ellipse(300, 400, 400, 400);  
+ }
+ 
